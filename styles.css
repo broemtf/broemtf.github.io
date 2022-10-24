@@ -1,0 +1,31 @@
+.title
+   {
+   text-align: center;
+   font-size:30px;
+   font-family: sans-serif;
+   }
+table 
+   {
+     border-collapse: collapse;
+   }
+td
+   {
+     border: 1px solid black;
+     Padding: 5px;
+   }
+.header
+   {
+    background-color: grey;
+   }
+body
+{
+ background-image: url('pizza.webp');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size:99.5% 100%;
+}
+.white
+{
+color: white;
+font-family: sans-serif;
+}
