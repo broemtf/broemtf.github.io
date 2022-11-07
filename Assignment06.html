@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Where are you from?</title>
+  <script>
+    function glue()
+    {
+     document.querySelector("#Origin").value =
+       document.querySelector("#City").value
+     + ", "
+     + document.querySelector("#State").value;
+    }
+    function choice1()
+    {
+     alert ("Fun Fact: More than 80% of all living things reside in the forest!");
+    }
+    function choice2()
+    {
+     alert ("Fun Fact: During the Victorian Era doctors would prescribe patients a trip to the beach!");
+    }
+    function response()
+    {
+     document.querySelector("#changeText").innerHTML = document.querySelector("#City").value + " is great!";
+    }
+  </script>
+ </head>
+<body>
+ <h1>Where are you from?</h1>
+<form name="origin">
+   City: <input type=text id="City" onchange="response();"><br>
+   State: <input type=text id="State" onchange="glue();"><br>
+   Origin: <input type=text id="Origin"><br><br>
+  <div id=changeText>
+  I'm from Baltimore.
+  </div>
+ <h1>What biomes do you like?</h1>
+   <input type=checkbox>Mountains<br>
+   <input type=checkbox onclick="choice1();">Forest<br>
+   <input type=checkbox onclick="choice2();">Beach<br>
+   <input type=checkbox>Plains<br><br>
+   <input type="reset" value="Clear"><br><br>
+  </form>
+ </body>
+</html>
