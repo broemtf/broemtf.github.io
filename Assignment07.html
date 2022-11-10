@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Assignment07</title>
+  <script>
+    var bgToggle=true;
+    function makeRed()
+    {
+       if (bgToggle) {
+
+    document.querySelector('body').style.backgroundColor="red";
+       bgToggle=false;
+        } else {
+
+    document.querySelector('body').style.backgroundColor="white";
+       bgToggle=true;
+       }
+    }
+    var bgToggle=true;
+    function makeBlue()
+    {
+       if (bgToggle) {
+
+    document.querySelector('body').style.backgroundColor="blue";
+       bgToggle=false;
+        } else {
+
+    document.querySelector('body').style.backgroundColor="white";
+       bgToggle=true;
+       }
+    }
+    var bgToggle=true;
+    function makeGreen()
+    {
+       if (bgToggle) {
+
+    document.querySelector('body').style.backgroundColor="green";
+       bgToggle=false;
+        } else {
+
+    document.querySelector('body').style.backgroundColor="white";
+       bgToggle=true;
+       }
+    }
+    function doSum()
+    {
+     var sum=0;
+     var N = parseInt(
+     document.querySelector("#N").value );
+     var L = parseInt(
+     document.querySelector("#L").value );
+     for (i=L; i<=N; i++) {
+     sum += i;
+     }
+     document.querySelector("#sumHere").innerHTML =
+     "Your sum is: "+sum;
+    }
+    function add()
+    {
+     document.querySelector("#equal").value=
+     parseFloat(document.querySelector("#first").value)+
+     parseFloat(document.querySelector("#second").value);
+    }
+    function subtract()
+    {
+     document.querySelector("#equal").value=
+     parseFloat(document.querySelector("#first").value)-
+     parseFloat(document.querySelector("#second").value);
+    }
+    function multiply()
+    {
+     document.querySelector("#equal").value=
+     parseFloat(document.querySelector("#first").value)*
+     parseFloat(document.querySelector("#second").value);
+    }
+    function divide()
+    {
+     document.querySelector("#equal").value=
+     parseFloat(document.querySelector("#first").value)/
+     parseFloat(document.querySelector("#second").value);
+    }
+  </script>
+ </head>
+ <body>
+  <form name=inclass>
+   <h3>Page Color:</h3>
+   <input type=button value="Red" onclick="makeRed();">
+   <input type=button value="Blue" onclick="makeBlue();">
+   <input type=button value="Green" onclick="makeGreen();"><br><br>
+   <h3>Summation:</h3>
+   Start Value: <input type=text id="L"><br>
+   End Value: <input type=text id="N"><br><br>
+   <input type=button value="Start the Sum" onclick="doSum();"><br><br>
+    <div id="sumHere">
+    Your sum is:
+    </div><br>
+   <h3>Simple Calculator:</h3>
+   <input type=text id="first">
+   <input type=button value="+" onclick="add();">
+   <input type=button value="-" onclick="subtract();">
+   <input type=button value="*" onclick="multiply();">
+   <input type=button value="/" onclick="divide();">
+   <input type=text id="second">
+   <input type=text id="equal"><br><br>
+   <input type="reset" value="Clear">
+  </form>
+ </body>
+</html>
