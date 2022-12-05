@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Foreign Music Recommendations</title>
+  <a name="top">
+  <script>
+function one()
+     {
+       document.querySelector("#spanish").innerHTML = "Spanish Artist Recommendations: Bad Bunny, Maná, Camilo, Luis Enrique, Celia Cruz";
+     }
+function two()
+     {
+       document.querySelector("#german").innerHTML = "German Artist Recommendations: AnnenMayKantereit, Provinz, Faber, Mine, BRUCKNER;"
+     }
+function three()
+     {
+       document.querySelector("#french").innerHTML = "French Artist Recommendations: Zaz, Vianney, Stromae, Lisandro Cuxi, Nena;"
+     }
+function four()
+     {
+       document.querySelector("#korean").innerHTML = "Korean Artist Recommendations: LOONA, BTS, TWICE, ATEEZ, BLACK Pink;"
+     }
+function changeImg(value){
+    var img = document.getElementById("img");
+    switch(value){
+        case "spanish": img.src="spanish.jpg";break;
+        case "german": img.src="german.jpg";break;
+        case "french": img.src="french.jpg";break;
+        case "korean": img.src="korean.jpg";break;
+        default: return false;
+    }
+  }
+function confChka()
+    {
+    var areYouSure = confirm("Are you sure?");
+    if (areYouSure) {alert("You should try branching out more.");} 
+    else {alert("Fhew, that's a relief");}
+    }
+function confChkf()
+    {
+    var areYouSure = confirm("Are you sure?");
+    if (areYouSure) {alert("Thats Awesome! Keep it up.");} 
+    else {alert("Oh no!");}
+    }
+  </script>
+  <style>
+   table
+    {
+     border: 1px solid black;
+     border-collapse: collapse;
+    }
+   td
+    {
+     border: 1px solid black;
+     padding: 5px;
+     font-weight: bold;
+    }
+   .shade
+    {
+     background-color: grey;
+    } 
+   img
+    {
+     max-width:450px;
+     max-height:450px;
+    }
+  </style>
+ </head>
+ <body>
+  <h1>Foreign Music Recommendations</h2>
+  <h2>Select a language to receive artist recommendations</h2>
+  <form name="foriegn" action="https://www.google.com/search" method="get">
+   <table>
+    <tr class="shade">
+     <td>Language</td>
+     <td>Artist Recommendations</td>
+    </tr>
+    <tr>
+     <td>Spanish<INPUT TYPE=CHECKBOX NAME="span" VALUE="Spanish Artist Recommendations: Bad Bunny, Maná, Camilo, Luis Enrique, Celia Cruz" onclick="one();"></td>
+     <td><div id="spanish">Spanish Artist Recommendations: </div></td>
+    </tr>
+    <tr>
+     <td>German<INPUT TYPE=CHECKBOX NAME="germ" VALUE="germ" onclick="two();"></td>
+     <td><div id="german">German Artist Recommendations: </div></td>
+    </tr>
+    <tr>
+     <td>French<INPUT TYPE=CHECKBOX NAME="fren" VALUE="fren" onclick="three();"></td>
+     <td><div id="french">French Artist Recommendations: </div></td>
+    </tr>
+    <tr>
+     <td>Korean<INPUT TYPE=CHECKBOX NAME="kore" VALUE="kore" onclick="four();"></td>
+     <td><div id="korean">Korean Artist Recommendations: </div></td>
+    </tr>
+   </table>
+   <h2>Search for the artist</h2>
+    Use the list(s) above to browse through their songs<br><br>
+    Artist name: <input type=text name="q"><input type="submit" value="search">
+    <h2>The Top 10 Hit Songs</h2>
+     <ul>
+      <li>Spanish</li>
+       <ol>
+        <li>Titi Me pregunto - Bad Bunny</li>
+        <li>Me Porto Bonito - Bad Bunny & Chencho Corleone</li>
+        <li>No Se Va - Grupo Frontera</li>
+        <li>Moscow Mule - Bad Bunny</li>
+        <li>Efecto - Bad Bunny</li>
+        <li>La Bachata - Manuel Turizo</li>
+        <li>Provenza - Karol G</li>
+        <li>Monotonia - Shakira ft. Ozuna</li>
+        <li>Gatubela - Karol G ft. Maldy</li>
+        <li>Cairo -Karol G & Ovy On The Drums</li>
+       </ol>
+      <li>German</li>
+       <ol>
+        <li>ELMAS - Lil Zey, Luciano</li>
+        <li>Frag mick nicht - Jamule, Nimo, Miksu/Macloud</li>
+        <li>3065 - Ausserkontrolle</li>
+        <li>Wasted Love - Ofenback ft. Lagique</li>
+        <li>Wer wenn nicht wir - Wincent Weiss</li>
+        <li>Leere Hände - Santos, Sido, Samra</li>
+        <li>KIDS FROM THE BLOCK - Luciano</li>
+        <li>ZART - Nimo</li>
+        <li>Warum? - Tic Tac Toe</li>
+        <li>Haus am See - Peter Fox</li>
+       </ol>
+      <li>French</li>
+       <ol>
+        <li>Suavemente - Soolking</li>
+        <li>Balader - Soolking, Niska</li>
+        <li>Vahine - Zimmer, Antoiné Lang</li>
+        <li>Ounblie-moi - Emkal</li>
+        <li>DIE - Gazo</li>
+        <li>Regardez-moi - Molière L'opéra urbain, Abi Beradoth</li>
+        <li>J'ai tout su - Jul</li>
+        <li>Clic clic pan pan - Yanns</li>
+        <li>Compliqué - Dr. Yaro & La Folie</li>
+        <li>TOUT VA BIEN - Alonzo, Ninho, Naps</li>
+       </ol>
+      <li>Korean</li>
+       <ol>
+        <li>Ddu-Du Ddu-Du - Blackpink</li>
+        <li>Kill This Love - Blackpink</li>
+        <li>Boy With Luv - BTS, Halsey</li>
+        <li>Idol - BTS</li>
+        <li>Tt - Twice</li>
+        <li>Solo - Jennie</li>
+        <li>Bang Bang Bang - Big Bang</li>
+        <li>Bboom Bboom - Momoland</li>
+        <li>Love Scenario - Ikon</li>
+        <li>Dynamite - BTS</li>
+       </ol>
+     </ul>
+   <h2>Click to see a map of the countries which speak each language</h2>
+    <input type="radio" name="l" value="spanish" onclick="changeImg(this.value);"/> Spanish
+    <input type="radio" name="l" value="german" onclick="changeImg(this.value);"/> German
+    <input type="radio" name="l" value="french" onclick="changeImg(this.value);"/> French
+    <input type="radio" name="l" value="korean" onclick="changeImg(this.value);"/> Korean
+   <br><br>
+   <img src="map2.jpg" id="img"/>
+   <br><br>
+  <h4>Do you usually prefer listening to American or Foreign Music?</h4>
+   <input type=button value="American" onclick="confChka();"> &nbsp; &nbsp;
+   <input type=button value="Foreign" onclick="confChkf();">
+   <br><br>
+  <h2>Other Recommended Websites</h2>
+   <a href="file:///Users/teresabroemmelsiek/Documents/GitHub/broemtf.github.io/Music%20Recommendations.html">Artist Recommendations</a><br><br>
+   <a href="https://saraimartinez-luna.github.io/FinalProject.html">Instrument Recommendations</a><br><br>
+    <input type="reset" value="Clear">
+    <button id="myBtn"><a href="#top">Click here to return to the top of the page</a></button>
+  </form>
+ </body>
+</html>
