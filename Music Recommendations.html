@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Music Recommendations</title>
+<a name="top">
+ <script>
+function changeImg(value){
+    var img = document.getElementById("img");
+    switch(value){
+        case "Rock": img.src="courtney.jpeg";break;
+        case "Folk": img.src="lumineers.jpg";break;
+        case "Indie": img.src="isakov.jpg";break;
+        case "Pop": img.src="odell.jpg";break;
+        default: return false;
+    }
+  }
+function rock()
+  {
+   document.querySelector("#recommendation").innerHTML = "You should try listening to Barnes Courtney. His album The Attractions of Youth is displayed below.";
+  }
+function folk()
+  {
+   document.querySelector("#recommendation").innerHTML = "You should try listening to The Lumineers. Their album Cleopatra is displayed below.";
+  }
+function indie()
+  {
+   document.querySelector("#recommendation").innerHTML = "You should try listening to Gregory Alan Isakov. His album The Weatherman is displayed below.";
+  }
+function pop()
+  {
+   document.querySelector("#recommendation").innerHTML = "You should try listening to Tom Odell. His album Long Way Down is displayed below.";
+  }
+function text()
+ {
+   document.querySelector("#band").innerHTML = "I love " + document.querySelector("#artist").value + "!";
+ }
+function emote()
+ {
+  if (document.querySelector("#helpful").value =="yes" || document.querySelector("#helpful").value =="Yes"){
+   alert(":)");
+ } else {
+  alert(":(");
+ }
+ }
+function agree()
+ {
+  alert("I also like Adele!")
+ } 
+</script>
+<style>
+ table
+ {
+ border: 1px solid black;
+ border-collapse: collapse;
+ }
+ td
+ {
+ border: 1px solid black;
+ padding: 5px;
+ font-weight: bold;
+ }
+ .numbers
+ {
+  background-color: grey;
+ } 
+ </style>
+</head>
+<body>
+<h1>Music Recommendations</h1>
+<form>
+<h2>Genre Explanations</h2>
+ <ul>
+   <li>Rock- music that usually contains an electronic guitar, electric bass, drums and one or more singers and is written in a 4/4 time signature using a verse-chorus form.</li> 
+   <li>Folk- traditional acoustic instrumentation with a simple melody and lyrics that tell a story.</li>
+   <li>Indie- any artist or band that independently records and publishes their music. The genre encourages experimentation and has influences from many different genres.</li>
+   <li>Pop- focuses on a general audience with an emphasis on recording, production, technology and creativity. The melodies and beats are often simple with limited harmonic accompaniment.</li>
+  </ul>
+<h2>Most Popular Artists of 2022</h2>
+  <table>
+   <tr>
+    <td class="numbers">1</td>
+    <td>Ed Sheeran</td>
+   </tr>
+   <tr>
+    <td class="numbers">2</td>
+    <td>Billie Eilish</td>
+   </tr>
+   <tr>
+    <td class="numbers">3</td>
+    <td>Ariana Grande</td>
+   </tr>
+   <tr>
+    <td class="numbers">4</td>
+    <td>Taylor Swift</td>
+   </tr>
+   <tr>
+    <td class="numbers">5</td>
+    <td>Adele</td>
+   </tr>
+   <tr>
+    <td class="numbers">6</td>
+    <td>Lady Gaga</td>
+   </tr>
+   <tr>
+    <td class="numbers">7</td>
+    <td>Justin Bieber</td>
+   </tr>
+   <tr>
+    <td class="numbers">8</td>
+    <td>Shawn Mendes</td>
+   </tr>
+   <tr>
+    <td class="numbers">9</td>
+    <td>Dua Lipa</td>
+   </tr>
+   <tr>
+    <td class="numbers">10</td>
+    <td>Camila Cabello</td>
+   </tr>
+  </table>
+<h2>Which of these artists are you a fan of?</h2>
+<INPUT TYPE=CHECKBOX NAME="Ed Sheeran" VALUE="Ed Sheeran"> Ed Sheeran<br>
+<INPUT TYPE=CHECKBOX NAME="Billie Eilish" VALUE="Billie Eilish"> Billie Eilish<br>
+<INPUT TYPE=CHECKBOX NAME="Ariana Grande" VALUE="Ariana Grande"> Ariana Grande<br>
+<INPUT TYPE=CHECKBOX NAME="Taylor Swift" VALUE="Taylor Swift"> Taylor Swift<br>
+<INPUT TYPE=CHECKBOX NAME="Adele" VALUE="Adele" onclick="agree();"> Adele<br>
+<INPUT TYPE=CHECKBOX NAME="Lady Gaga" VALUE="Lady Gaga"> Lady Gaga<br>
+<INPUT TYPE=CHECKBOX NAME="Justin Bieber" VALUE="Justin Bieber"> Justin Bieber<br>
+<INPUT TYPE=CHECKBOX NAME="Shawn Mendes" VALUE="Shawn Mendes"> Shawn Mendes<br>
+<INPUT TYPE=CHECKBOX NAME="Dua Lipa" VALUE="Dua Lipa"> Dua Lipa<br>
+<INPUT TYPE=CHECKBOX NAME="Camila Cabello" VALUE="Camila Cabello"> Camila Cabello<br>
+<h2>What kind of music do you like?</h2>
+<div id="recommendation">
+Select one and I will make an artist recommendation!
+</div>
+<br>
+<input type="radio" name="one" value="Rock" onclick="changeImg(this.value); rock();"/> Rock
+  <input type="radio" name="one" value="Folk" onclick="changeImg(this.value); folk();"/> Folk
+  <input type="radio" name="one" value="Indie" onclick="changeImg(this.value); indie();"/> Indie
+  <input type="radio" name="one" value="Pop" onclick="changeImg(this.value); pop();"/> Pop
+<br><br>
+<img src="default.png" id="img"/>
+<br><br>
+<h2>Who is your favorite artist?</h2>
+<input type="text" id="artist" onchange="text();">
+<br><br>
+<div id="band">
+My favorite band is Rainbow Kitten Surprise.
+</div>
+<h2>Did you find this page helpful?</h2>
+<input type="text" id="helpful" onchange="emote();">
+<h2>Other Recommended Websites</h2>
+<a href="https://saraimartinez-luna.github.io/FinalProject.html">Instrument Recommendations</a><br><br>
+<a href="https://broemtf.github.io/Signature%20Assignment.html">Foreign Music Recommendations</a><br><br>
+<input type="reset" value="Clear">
+<button id="myBtn"><a href="#top">Click here to return to the top of the page</a></button>
+</body>
+</form>
+</html>
